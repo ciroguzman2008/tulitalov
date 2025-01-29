@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Tuli 💖</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #8A2BE2, #4B0082);
+            background-image: url('tulipanes_realistas.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+        }
+
+        h1 {
+            color: #ffccff;
+            font-size: 48px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: auto;
+            background: rgba(75, 0, 130, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            background-color: #800080;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #9b30b6;
+            transform: scale(1.1);
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #ffffff;
+            animation: shootingStar 2s linear infinite;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(100vw, 100vh);
+                opacity: 0;
+            }
+        }
+
+        .star:nth-child(1) { top: 5%; left: 5%; animation-duration: 2s; animation-delay: 0s; }
+        .star:nth-child(2) { top: 15%; left: 25%; animation-duration: 2.2s; animation-delay: 0.2s; }
+        .star:nth-child(3) { top: 25%; left: 45%; animation-duration: 2.5s; animation-delay: 0.4s; }
+        .star:nth-child(4) { top: 35%; left: 65%; animation-duration: 2.8s; animation-delay: 0.6s; }
+        .star:nth-child(5) { top: 45%; left: 85%; animation-duration: 3s; animation-delay: 0.8s; }
+        .star:nth-child(6) { top: 55%; left: 10%; animation-duration: 3.2s; animation-delay: 1s; }
+        .star:nth-child(7) { top: 65%; left: 30%; animation-duration: 3.5s; animation-delay: 1.2s; }
+        .star:nth-child(8) { top: 75%; left: 50%; animation-duration: 3.7s; animation-delay: 1.4s; }
+        .star:nth-child(9) { top: 85%; left: 70%; animation-duration: 4s; animation-delay: 1.6s; }
+        .star:nth-child(10) { top: 95%; left: 90%; animation-duration: 4.2s; animation-delay: 1.8s; }
+        .star:nth-child(11) { top: 10%; left: 15%; animation-duration: 1.9s; animation-delay: 2s; }
+        .star:nth-child(12) { top: 20%; left: 35%; animation-duration: 2.1s; animation-delay: 2.2s; }
+        .star:nth-child(13) { top: 30%; left: 55%; animation-duration: 2.3s; animation-delay: 2.4s; }
+        .star:nth-child(14) { top: 40%; left: 75%; animation-duration: 2.6s; animation-delay: 2.6s; }
+        .star:nth-child(15) { top: 50%; left: 90%; animation-duration: 2.8s; animation-delay: 2.8s; }
+        .star:nth-child(16) { top: 60%; left: 20%; animation-duration: 3.1s; animation-delay: 3s; }
+        .star:nth-child(17) { top: 70%; left: 40%; animation-duration: 3.3s; animation-delay: 3.2s; }
+        .star:nth-child(18) { top: 80%; left: 60%; animation-duration: 3.5s; animation-delay: 3.4s; }
+        .star:nth-child(19) { top: 90%; left: 80%; animation-duration: 3.7s; animation-delay: 3.6s; }
+
+    </style>
+</head>
+<body>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+    <button onclick="playMusic()">Reproducir Canción</button>
+
+    <h1>Para mi Tuli 💖</h1>
+
+    <p>
+        Mi amor, cada vez que te miro, siento que el mundo se detiene y todo lo que importa eres vos. No hay nada en este universo que se compare a la felicidad que siento cuando estoy a tu lado. Desde el primer día en que nuestras miradas se cruzaron, mi vida cambió para siempre. No me imaginaba que podía sentir algo tan fuerte, tan puro, pero vos lo lograste. Me enseñaste lo que es el verdadero amor, un amor que no tiene fin, un amor que va más allá de cualquier cosa que pueda describir con palabras.
+        <br><br>
+        Cada día que paso con vos siento que la vida tiene sentido. Todo lo que me rodea pierde importancia cuando estás conmigo. Mi mundo entero gira alrededor de vos, y es el lugar más hermoso en el que jamás pensé vivir. Me haces sentir tan especial, tan amado, que no puedo evitar agradecerle a la vida por haberte puesto en mi camino. Cada sonrisa tuya ilumina mi día, cada abrazo me llena de calma y cada beso me hace sentir como si nada pudiera interponerse entre nosotros. 
+        <br><br>
+        Vos sos esa persona que soñé encontrar sin siquiera saberlo. Eres mi compañera, mi amiga, mi amor, mi todo. No solo te amo por lo que sos, sino por lo que me haces sentir. Con vos soy mi mejor versión, me haces querer ser una persona mejor, y todo eso, simplemente porque te amo con todo lo que soy. Quiero que sepas que cada palabra que te digo, cada gesto que tengo hacia vos, viene del fondo de mi corazón. Lo que siento por vos es real, es profundo y eterno. Y nada ni nadie podrá cambiarlo.
+        <br><br>
+        Quiero que sepas, mi amor, que te voy a amar siempre. No importa lo que pase, no importa los obstáculos que tengamos que enfrentar, siempre estaré a tu lado. Mi amor por vos no tiene límites, es incondicional, y va a seguir creciendo con cada día que pase. Porque cada vez que te veo, cada vez que te escucho, cada vez que siento tu presencia, mi amor se hace más grande, más fuerte. Sos mi razón de ser, y sin vos, la vida no tendría sentido. 
+        <br><br>
+        Mi promesa para vos es que siempre te voy a acompañar, en los momentos felices y en los difíciles. Siempre voy a estar ahí para levantarte cuando caigas, para animarte cuando te sientas triste, para darte mi mano cuando sientas que no podés seguir. Siempre voy a ser tu apoyo, tu compañero incondicional, el que nunca te va a dejar, el que siempre va...
+    </p>
+
+    <div class="gallery">
+        <img src="WhatsApp Image (1).jpeg" alt="Foto 1">
+        <img src="WhatsApp Image (2).jpeg" alt="Foto 2">
+        <img src="WhatsApp Image (3).jpeg" alt="Foto 3">
+        <img src="WhatsApp Image (4).jpeg" alt="Foto 4">
+        <img src="WhatsApp Image (5).jpeg" alt="Foto 5">
+        <img src="WhatsApp Image.jpeg" alt="Foto 6">
+    </div>
+
+    <audio id="music" preload="auto">
+        <source src="we_fell_in_love_in_october.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('music');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
